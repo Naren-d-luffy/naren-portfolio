@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.custom-shape-1 {
+  border-radius: 84% 16% 29% 71% / 69% 67% 33% 31% ;
+  box-shadow: 
+    inset 0 0 50px #fff, 
+    inset 20px 0 80px #6D28D9, 
+    inset -20px 0 80px #6D28D9, 
+    inset 20px 0 300px #6D28D9, 
+    inset -20px 0 300px #6D28D9, 
+    0 0 50px #fff, 
+    -10px 0 80px #6D28D9, 
+    10px 0 80px #6D28D9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes ring-move {
+  0% {
+    box-shadow: inset 3px 3px 0px #9333ea;
+  }
+  25% {
+    box-shadow: inset -0px 3px 0px #9333ea;
+  }
+  50% {
+    box-shadow: inset -3px -3px 0px #9333ea;
+  }
+  75% {
+    box-shadow: inset 3px -3px 0px #9333ea;
+  }
+  100% {
+    box-shadow: inset 3px 3px 0px #9333ea;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animated-ring {
+  position: relative;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 2px #9333ea;
+  animation: ring-move 8s linear infinite;
 }
