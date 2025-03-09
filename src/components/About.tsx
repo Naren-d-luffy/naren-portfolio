@@ -2,10 +2,11 @@ import React from "react";
 
 export default function About() {
   return (
-    <section id="about" className="text-black py-16 px-6">
-      <div className="w-full flex justify-around p-20 rounded-lg shadow-lg shadow-violet-400">
+    <section id="about" className="text-black pb-16 bg-violet-100 px-6 pt-20 rounded-lg shadow-lg shadow-violet-400 my-10">
+      <p className="font-bold text-8xl text-violet-200 text-center pb-5">Know Me More</p>
+      <div className="w-full flex justify-around px-20 pt-0">
         <div className="w-3/4 "  data-aos="fade-right">
-          <h2 className="text-5xl font-openSans font-bold text-violet-500 mb-4">
+          <h2 className="text-2xl font-openSans text-violet-500 mt-4 mb-2 font-semibold ">
             About Me
           </h2>
           <p className="text-xl text-justify w-10/12">
