@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import profile from "../../public/04-Photoroom.png";
+import profile from "../../public/Adobe Express 1.png";
 
 export default function Hero() {
   return (
@@ -8,7 +8,7 @@ export default function Hero() {
       id="hero"
       className="w-full h-screen flex flex-row lg:p-20 items-center justify-center text-center relative"
     >
-      <div className="w-1/2 space-y-1 text-left">
+      <div data-aos="fade-up" className="w-1/2 space-y-1 text-left">
         <h1 className="text-7xl font-bold font-openSans mt-4 text-gray-950">
           I&apos;m Ram <span className="text-purple-800">Naren</span>
         </h1>
@@ -24,11 +24,11 @@ export default function Hero() {
           className="px-6 py-2 bg-gray-950 text-white rounded-lg relative overflow-hidden 
              hover:bg-purple-700 animated-ring"
         >
-          Download CV
+          Preview CV
         </a>
       </div>
-      <div className="relative w-1/2 flex justify-center">
-        <div className="absolute w-96 h-96 bg-purple-600 -z-10 custom-shape-1 top-33.5"></div>
+      <div data-aos="fade-up" className="relative w-1/2 flex justify-center">
+        <div className="absolute w-96 h-96 bg-purple-600 -z-10 custom-shape-1 top-35"></div>
         <Image
           src={profile}
           alt="RamNaren"
