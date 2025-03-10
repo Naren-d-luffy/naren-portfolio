@@ -17,7 +17,7 @@ export default function Hero() {
           technologies, and scalable web applications.
         </p>
         <a
-        href="#contact"
+          href="#contact"
           className="px-6 py-2 bg-gray-950 text-white rounded-lg relative overflow-hidden 
              hover:bg-purple-700 animated-ring"
         >

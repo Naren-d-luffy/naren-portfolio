@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const openSans = Open_Sans({subsets: ["latin"],variable: "--font-open-sans",display: "swap",});
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans", display: "swap", });
 
 export const metadata: Metadata = {
   title: "RamNaren | Portfolio",
