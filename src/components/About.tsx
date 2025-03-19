@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <section id="about" className="text-black pb-16 bg-violet-100 px-6 pt-20 rounded-lg shadow-lg shadow-violet-400 my-10">
-      <p className="font-bold text-8xl text-violet-200 text-center pb-5">Know Me More</p>
+      <p className="font-bold text-8xl text-violet-200 text-center pb-5 " data-aos="fade-up">Know Me More</p>
       <div className="w-full flex justify-around px-20 pt-0">
         <div className="w-3/4 " data-aos="fade-right">
           <h2 className="text-2xl font-openSans text-violet-500 mt-4 mb-2 font-semibold ">

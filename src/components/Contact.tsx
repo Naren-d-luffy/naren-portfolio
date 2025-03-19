@@ -1,8 +1,9 @@
 "use client";
 
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+
 import { useState } from "react";
-import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -17,14 +18,14 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "your_service_id", // Replace with your EmailJS service ID
-        "your_template_id", // Replace with your EmailJS template ID
+        "your_service_id",
+        "your_template_id",
         {
           name: form.name,
           email: form.email,
           message: form.message,
         },
-        "your_public_api_key" // Replace with your EmailJS public key
+        "your_public_api_key"
       );
 
       setIsSent(true);
@@ -35,37 +36,43 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4 max-w-2xl">
-        <h2 className="text-6xl font-bold text-center text-purple-700 mb-10" data-aos="fade-up">
+    <section id="contact" className="py-20 pt-5 flex bg-violet-100 rounded-lg shadow-lg shadow-violet-400 my-10 overflow-hidden">
+
+      <div className="flex flex-col items-start justify-center w-1/4 space-y-4" data-aos="fade-right">
+        <div className="space-x-4 flex flex-col gap-6 pl-2">
+          <a href="https://www.linkedin.com/in/ramnarend/" target="_blank" rel="noopener noreferrer"
+            className="hover:text-violet-800 hover:pl-3 transition-all duration-300 ease-in-out text-violet-500"
+            data-aos="fade-right" data-aos-delay="100">
+            <FaLinkedin size={28} />
+          </a>
+          <a href="mailto:ramnaren.d.luffy@gmail.com"
+            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            data-aos="fade-right" data-aos-delay="200">
+            <FaEnvelope size={28} />
+          </a>
+          <a href="https://wa.me/8903310663"
+            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            data-aos="fade-right" data-aos-delay="300">
+            <FaWhatsapp size={28} />
+          </a>
+          <a href="tel:8903310663"
+            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            data-aos="fade-right" data-aos-delay="400">
+            <FaPhoneAlt size={26} />
+          </a>
+          <a href="https://github.com/Naren-d-luffy" target="_blank" rel="noopener noreferrer"
+            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            data-aos="fade-right" data-aos-delay="500">
+            <FaGithub size={28} />
+          </a>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center justify-center w-3/4 px-4 max-w-2xl">
+        <h2 className="text-8xl font-bold text-center pt-10 text-violet-200 pb-5" data-aos="fade-up">
           Contact Me
         </h2>
-
-        <div className="flex flex-col items-center space-y-4 mb-10" data-aos="fade-up">
-          <p className="text-lg flex items-center space-x-2">
-            <FaEnvelope className="text-purple-600" />
-            <a href="mailto:ramnaren.d.luffy@gmail.com" className="text-blue-500 hover:underline">
-              ramnaren.d.luffy@gmail.com
-            </a>
-          </p>
-          <p className="text-lg flex items-center space-x-2">
-            <FaPhone className="text-purple-600" />
-            <a href="tel:8903310663">+91 8903310663</a>
-          </p>
-          <div className="flex space-x-4">
-            <a href="https://github.com/Naren-d-luffy" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900">
-              <FaGithub size={30} />
-            </a>
-            <a href="https://www.linkedin.com/in/ramnarend/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-              <FaLinkedin size={30} />
-            </a>
-            <a href="https://wa.me/8903310663" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-700">
-              <FaWhatsapp size={30} />
-            </a>
-          </div>
-        </div>
-
-        <form onSubmit={handleSubmit} className="bg-white p-6 shadow-lg rounded-lg" data-aos="fade-up">
+        <form onSubmit={handleSubmit} className="bg-purple-50 p-6 shadow-lg rounded-lg shadow-violet-200 w-full" data-aos="fade-up">
           {isSent && <p className="text-green-600 mb-4">Message sent successfully!</p>}
 
           <div className="mb-4">
@@ -110,5 +117,6 @@ export default function Contact() {
         </form>
       </div>
     </section>
+
   );
 }

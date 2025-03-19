@@ -25,7 +25,7 @@ export default function EducationExperience() {
   return (
     <section id="education-experience" className=" bg-violet-100 rounded-lg pt-5 shadow-lg shadow-violet-400 my-10 overflow-hidden">
       <div className="p-20">
-        <h2 className="text-8xl font-bold text-center mb-10 text-violet-200 pb-5">Education & Experience</h2>
+        <h2 className="text-8xl font-bold text-center mb-10 text-violet-200 pb-5" data-aos="fade-up">Education & Experience</h2>
 
         <div className="grid md:grid-cols-2 gap-12 w-full">
           <div data-aos="fade-right">
