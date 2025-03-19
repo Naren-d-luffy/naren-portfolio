@@ -22,10 +22,10 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-20 bg-gray-100">
+    <section id="certifications" className="py-25 rounded-lg shadow-lg shadow-violet-400 overflow-hidden">
       <div className="container mx-auto px-4">
         <h2
-          className="text-6xl font-bold text-center text-purple-700 mb-10"
+          className="text-8xl font-bold text-center mb-10 text-violet-200 pb-5"
           data-aos="fade-up"
         >
           Certifications

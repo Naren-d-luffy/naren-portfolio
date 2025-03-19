@@ -35,15 +35,16 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-100">
+    <section id="projects" className="py-20 bg-violet-100 rounded-lg pt-5 shadow-lg shadow-violet-400 my-10 overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-6xl font-bold text-center text-purple-700 mb-10">Projects</h2>
+        <h2 className="text-8xl font-bold text-center mb-10 text-violet-200 pb-5" data-aos="fade-up">Projects</h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
               data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
               className="relative bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500 hover:shadow-xl transition-all duration-300"
             >
               {project.isPrivate && (
@@ -64,7 +65,10 @@ export default function Projects() {
               </div>
 
               {!project.isPrivate && (
-                <div className="mt-4 flex gap-4">
+                <div className="mt-4 flex gap-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 200}
+                >
                   <a
                     href={project.github}
                     target="_blank"
