@@ -40,30 +40,51 @@ export default function Contact() {
 
       <div className="flex flex-col items-start justify-center w-1/4 space-y-4" data-aos="fade-right">
         <div className="space-x-4 flex flex-col gap-6 pl-2">
-          <a href="https://www.linkedin.com/in/ramnarend/" target="_blank" rel="noopener noreferrer"
-            className="hover:text-violet-800 hover:pl-3 transition-all duration-300 ease-in-out text-violet-500"
-            data-aos="fade-right" data-aos-delay="100">
-            <FaLinkedin size={28} />
+          <a
+            href="https://www.linkedin.com/in/ramnarend/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-violet-500 transition-all duration-500 ease-in-out hover:text-violet-800 group"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <FaLinkedin
+              size={28}
+              className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
+            />
           </a>
+
           <a href="mailto:ramnaren.d.luffy@gmail.com"
-            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
             data-aos="fade-right" data-aos-delay="200">
-            <FaEnvelope size={28} />
+            <FaEnvelope 
+            size={28}
+            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
+            />
           </a>
           <a href="https://wa.me/8903310663"
-            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
             data-aos="fade-right" data-aos-delay="300">
-            <FaWhatsapp size={28} />
+            <FaWhatsapp
+            size={28}
+            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
+            />
           </a>
           <a href="tel:8903310663"
-            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
             data-aos="fade-right" data-aos-delay="400">
-            <FaPhoneAlt size={26} />
+            <FaPhoneAlt 
+            size={26} 
+            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
+            />
           </a>
           <a href="https://github.com/Naren-d-luffy" target="_blank" rel="noopener noreferrer"
-            className="hover:text-violet-800 text-violet-500 hover:pl-3 transition-all duration-300 ease-in-out"
+            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
             data-aos="fade-right" data-aos-delay="500">
-            <FaGithub size={28} />
+            <FaGithub 
+            size={28} 
+            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
+            />
           </a>
         </div>
       </div>
