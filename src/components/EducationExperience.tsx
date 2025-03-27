@@ -28,7 +28,6 @@ export default function EducationExperience() {
       className="bg-violet-100 rounded-lg pt-5 shadow-lg shadow-violet-400 my-10 overflow-hidden"
     >
       <div className="p-8 md:p-20">
-        {/* Section Heading */}
         <h2
           className="text-5xl md:text-8xl font-bold text-center mb-6 md:mb-10 text-violet-200 pb-3 md:pb-5"
           data-aos="fade-up"
@@ -36,9 +35,7 @@ export default function EducationExperience() {
           Education & Experience
         </h2>
 
-        {/* Grid Layout (1 Column on Mobile, 2 Columns on Larger Screens) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 w-full">
-          {/* Education Section */}
           <div data-aos="fade-right">
             <h3 className="text-xl md:text-2xl font-semibold text-violet-700 mb-3 md:mb-4 w-fit">
               Education
@@ -57,7 +54,6 @@ export default function EducationExperience() {
             </div>
           </div>
 
-          {/* Experience Section */}
           <div data-aos="fade-left">
             <h3 className="text-xl md:text-2xl font-semibold text-violet-700 mb-3 md:mb-4 w-fit">
               Experience
