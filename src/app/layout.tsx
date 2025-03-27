@@ -11,8 +11,11 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans", display: "swap", });
 
 export const metadata: Metadata = {
-  title: "RamNaren | Portfolio",
+  title: "RamNaren | Stack Hive",
   description: "Full Stack Developer | MERN | Next.js | Cloud",
+  icons: {
+    icon: "./favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
