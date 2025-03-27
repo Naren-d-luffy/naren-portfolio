@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <section id="about" className="text-black pb-16 bg-violet-100 px-6 pt-20 rounded-lg shadow-lg shadow-violet-400 my-10">
-      <p className="font-bold text-4xl md:text-8xl text-violet-200 text-center pb-5" data-aos="fade-up">
+      <p className="font-bold text-6xl md:text-8xl text-violet-200 text-center pb-5" data-aos="fade-up">
         Know Me More
       </p>
 
