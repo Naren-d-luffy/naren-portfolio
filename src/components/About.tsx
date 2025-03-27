@@ -12,38 +12,38 @@ export default function About() {
           <h2 className="text-xl md:text-2xl font-openSans text-violet-500 mt-4 mb-2 font-semibold text-center md:text-left">
             About Me
           </h2>
-          <p className="text-sm md:text-xl text-justify w-full md:w-10/12">
+          <p className="text-base md:text-xl text-justify w-full md:w-10/12">
             I&apos;m a passionate{" "}
-            <span className="text-violet-400 font-semibold">
+            <span className="text-violet-500 font-semibold">
               Full Stack Developer
             </span>{" "}
             with expertise in{" "}
-            <span className="text-violet-400 font-semibold">
+            <span className="text-violet-500 font-semibold">
               MERN Stack, cloud computing, and DevOps.
             </span>{" "}
             I have deployed projects on{" "}
-            <span className="text-violet-400 font-semibold">AWS and Azure</span>{" "}
+            <span className="text-violet-500 font-semibold">AWS and Azure</span>{" "}
             using CI/CD pipelines, ensuring scalable and high-performance
             applications. I enjoy solving complex problems, optimizing
             performance, and delivering efficient cloud-based solutions.
           </p>
         </div>
 
-        <div className="p-4 w-full md:w-4/12 space-y-5 flex flex-col items-center md:items-start" data-aos="fade-left">
+        <div className="p-2 md:p-4 w-full md:w-4/12 space-y-5 flex flex-col items-center md:items-start" data-aos="fade-left">
           <ul className="text-md md:text-xl space-y-3">
             <li>
-              <span className="font-semibold text-violet-400">Name:</span>{" "}
+              <span className="font-semibold text-violet-500">Name:</span>{" "}
               RamNaren
             </li>
             <li>
-              <span className="font-semibold text-violet-400">Email:</span>{" "}
+              <span className="font-semibold text-violet-500">Email:</span>{" "}
               ramnaren.d.luffy@gmail.com
             </li>
             <li>
-              <span className="font-semibold text-violet-400">Age:</span> 21
+              <span className="font-semibold text-violet-500">Age:</span> 21
             </li>
             <li>
-              <span className="font-semibold text-violet-400">From:</span>{" "}
+              <span className="font-semibold text-violet-500">From:</span>{" "}
               Chennai, India
             </li>
           </ul>

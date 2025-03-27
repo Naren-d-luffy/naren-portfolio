@@ -36,65 +36,43 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 pt-5 flex bg-violet-100 rounded-lg shadow-lg shadow-violet-400 my-10 overflow-hidden">
+    <section
+      id="contact"
+      className="py-12 md:py-20 flex flex-col md:flex-row bg-violet-100 rounded-lg shadow-lg shadow-violet-400 my-10 overflow-hidden"
+    >
+      <div className="flex flex-col items-center md:items-start justify-center w-full md:w-1/4 space-y-4 py-6 md:py-0" data-aos="fade-right">
+        <div className="flex flex-row md:flex-col space-x-6 md:space-x-0 md:gap-6 md:pl-2 pl-0">
+          {[
+            { href: "https://www.linkedin.com/in/ramnarend/", icon: <FaLinkedin size={28} />, delay: 100 },
+            { href: "mailto:ramnaren.d.luffy@gmail.com", icon: <FaEnvelope size={28} />, delay: 200 },
+            { href: "https://wa.me/8903310663", icon: <FaWhatsapp size={28} />, delay: 300 },
+            { href: "tel:8903310663", icon: <FaPhoneAlt size={26} />, delay: 400 },
+            { href: "https://github.com/Naren-d-luffy", icon: <FaGithub size={28} />, delay: 500 }
+          ].map(({ href, icon, delay }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative text-violet-500 transition-all duration-300 ease-in-out hover:text-violet-800 group inline-block"
+              data-aos="fade-right"
+              data-aos-delay={delay}
+            >
+              <span className="transition-all duration-300 ease-in-out transform group-hover:translate-x-2 block">
+                {icon}
+              </span>
+            </a>
 
-      <div className="flex flex-col items-start justify-center w-1/4 space-y-4" data-aos="fade-right">
-        <div className="space-x-4 flex flex-col gap-6 pl-2">
-          <a
-            href="https://www.linkedin.com/in/ramnarend/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative text-violet-500 transition-all duration-500 ease-in-out hover:text-violet-800 group"
-            data-aos="fade-right"
-            data-aos-delay="100"
-          >
-            <FaLinkedin
-              size={28}
-              className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
-            />
-          </a>
-
-          <a href="mailto:ramnaren.d.luffy@gmail.com"
-            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
-            data-aos="fade-right" data-aos-delay="200">
-            <FaEnvelope 
-            size={28}
-            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
-            />
-          </a>
-          <a href="https://wa.me/8903310663"
-            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
-            data-aos="fade-right" data-aos-delay="300">
-            <FaWhatsapp
-            size={28}
-            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
-            />
-          </a>
-          <a href="tel:8903310663"
-            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
-            data-aos="fade-right" data-aos-delay="400">
-            <FaPhoneAlt 
-            size={26} 
-            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
-            />
-          </a>
-          <a href="https://github.com/Naren-d-luffy" target="_blank" rel="noopener noreferrer"
-            className="relative hover:text-violet-800 text-violet-500 transition-all duration-300 ease-in-out group"
-            data-aos="fade-right" data-aos-delay="500">
-            <FaGithub 
-            size={28} 
-            className="transition-all duration-300 ease-in-out transform group-hover:translate-x-3"
-            />
-          </a>
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center w-3/4 px-4 max-w-2xl">
-        <h2 className="text-8xl font-bold text-center pt-10 text-violet-200 pb-5" data-aos="fade-up">
+      <div className="flex flex-col items-center justify-center w-full md:w-3/4 px-6 max-w-2xl">
+        <h2 className="text-5xl md:text-8xl font-bold text-center pt-5 md:pt-10 text-violet-200 pb-3 md:pb-5" data-aos="fade-up">
           Contact Me
         </h2>
-        <form onSubmit={handleSubmit} className="bg-purple-50 p-6 shadow-lg rounded-lg shadow-violet-200 w-full" data-aos="fade-up">
-          {isSent && <p className="text-green-600 mb-4">Message sent successfully!</p>}
+        <form onSubmit={handleSubmit} className="bg-purple-50 p-5 md:p-6 shadow-lg rounded-lg shadow-violet-200 w-full" data-aos="fade-up">
+          {isSent && <p className="text-green-600 mb-4 text-center">Message sent successfully!</p>}
 
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">Name</label>
@@ -138,6 +116,5 @@ export default function Contact() {
         </form>
       </div>
     </section>
-
   );
 }

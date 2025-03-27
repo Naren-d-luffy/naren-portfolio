@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 flex flex-col items-center space-y-4" data-aos="fade-up">
         <h2 className="text-2xl font-semibold">RamNaren</h2>
 
-        <nav className="flex space-x-6 text-sm">
+        <nav className="flex space-x-6 text-sm px-3 md:px-0">
           {["about", "skills", "projects", "certifications", "contact"].map((item) => (
             <a
               key={item}
