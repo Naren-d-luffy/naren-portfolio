@@ -1,16 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+
   return (
-    <header
-      className="py-4 px-6 sm:px-20 bg-violet-200 shadow-lg shadow-violet-400 fixed w-full top-0 z-50"
-      data-aos="fade-down"
-    >
+    <header className="py-4 px-6 sm:px-20 bg-violet-200 shadow-lg shadow-violet-400 fixed w-full top-0 z-50" data-aos="fade-down">
       <nav className="container mx-auto flex justify-between items-center">
         <h1 className="text-xl font-bold text-violet-950">RamNaren&apos;s Portfolio</h1>
 
@@ -30,22 +35,13 @@ export default function Header() {
           ))}
         </ul>
 
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-violet-950 text-2xl"
-        >
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-violet-950 text-2xl">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </nav>
 
-      <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-violet-200 flex flex-col items-center justify-center 
-        transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-      >
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-5 right-6 text-violet-950 text-3xl"
-        >
+      <div className={`md:hidden fixed top-0 left-0 w-screen h-screen bg-violet-200 flex flex-col items-center justify-center transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+        <button onClick={() => setIsOpen(false)} className="absolute top-5 right-6 text-violet-950 text-3xl">
           <FaTimes />
         </button>
 
