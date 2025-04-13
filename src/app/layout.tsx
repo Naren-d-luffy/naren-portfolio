@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased bg-violet-100 text-gray-900`}>
         <AOSProvider />
         <Header />
-        <main className="container mx-auto px-4">{children}</main>
+        <main className="container mx-auto px-4 overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>
