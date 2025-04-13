@@ -31,13 +31,13 @@ export default function Hero() {
       </div>
 
       <div className="relative md:w-1/2 w-full flex justify-center mt-10 md:mt-0">
-        <div className="absolute w-80 h-80 md:w-96 md:h-96 bg-purple-600 -z-10 custom-shape-1 -bottom-1 overflow-hidden" data-aos="fade-up" data-aos-delay="250"></div>
+        <div className="absolute w-80 h-80 md:w-96 md:h-96 bg-purple-600 -z-10 -rotate-12 custom-shape-1 bottom-0 overflow-hidden" data-aos="fade-up" data-aos-delay="250"></div>
         <Image
           src={profile}
           alt="RamNaren"
           width={350}
           height={350}
-          className="overflow-hidden"
+          className="overflow-hidden mb-3"
           data-aos="fade-up"
           data-aos-delay="400"
         />
