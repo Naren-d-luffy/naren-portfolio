@@ -4,10 +4,11 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaPhoneAlt } from "react-
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import swal from 'sweetalert';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [isSent, setIsSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,23 +17,62 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!form.name || !form.email || !form.message) {
+      swal({
+        title: "Incomplete Form",
+        text: "Please fill in all the required fields!",
+        icon: "warning",
+        buttons: {
+          confirm: {
+            visible: false,
+          }
+        },
+        timer: 3000,
+      });
+      return;
+    }
+
+    setLoading(true);
+
     try {
       await emailjs.send(
-        "your_service_id",
-        "your_template_id",
+        "service_mezk9j5",
+        "template_783ahpm",
         {
           name: form.name,
           email: form.email,
           message: form.message,
         },
-        "your_public_api_key"
+        "Yt97eqM5JTsVagxzb"
       );
 
-      setIsSent(true);
       setForm({ name: "", email: "", message: "" });
+      swal({
+        title: "Message Sent!",
+        text: "Your message has been sent successfully.",
+        icon: "success",
+        buttons: {
+          confirm: {
+            visible: false,
+          }
+        },
+        timer: 3000,
+      });
     } catch (error) {
       console.error("Email sending failed:", error);
+      swal({
+        title: "Sending Failed",
+        text: "Something went wrong while sending the message.",
+        icon: "error",
+        buttons: {
+          confirm: {
+            visible: false,
+          }
+        },
+        timer: 3000,
+      });
     }
+    setLoading(false);
   };
 
   return (
@@ -45,9 +85,9 @@ export default function Contact() {
           {[
             { href: "https://www.linkedin.com/in/ramnarend/", icon: <FaLinkedin size={28} />, delay: 100 },
             { href: "mailto:ramnaren.d.luffy@gmail.com", icon: <FaEnvelope size={28} />, delay: 200 },
-            { href: "https://wa.me/8903310663", icon: <FaWhatsapp size={28} />, delay: 300 },
-            { href: "tel:8903310663", icon: <FaPhoneAlt size={26} />, delay: 400 },
-            { href: "https://github.com/Naren-d-luffy", icon: <FaGithub size={28} />, delay: 500 }
+            { href: "https://wa.me/+91 9345233824", icon: <FaWhatsapp size={28} />, delay: 300 },
+            { href: "tel:+91 9345233824", icon: <FaPhoneAlt size={26} />, delay: 400 },
+            { href: "https://github.com/Ramnaren-dev", icon: <FaGithub size={28} />, delay: 500 }
           ].map(({ href, icon, delay }, index) => (
             <a
               key={index}
@@ -72,8 +112,6 @@ export default function Contact() {
           Contact Me
         </h2>
         <form onSubmit={handleSubmit} className="bg-purple-50 p-5 md:p-6 shadow-lg rounded-lg shadow-violet-200 w-full" data-aos="fade-up">
-          {isSent && <p className="text-green-600 mb-4 text-center">Message sent successfully!</p>}
-
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700">Name</label>
             <input
@@ -81,7 +119,6 @@ export default function Contact() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              required
               className="w-full mt-1 p-3 border rounded-md focus:ring-2 focus:ring-purple-600 outline-none"
             />
           </div>
@@ -93,7 +130,6 @@ export default function Contact() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              required
               className="w-full mt-1 p-3 border rounded-md focus:ring-2 focus:ring-purple-600 outline-none"
             />
           </div>
@@ -104,14 +140,13 @@ export default function Contact() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              required
               rows={4}
               className="w-full mt-1 p-3 border rounded-md focus:ring-2 focus:ring-purple-600 outline-none"
             ></textarea>
           </div>
 
-          <button type="submit" className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
-            Send Message
+          <button type="submit" disabled={loading} className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition disabled:opacity-50">
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>

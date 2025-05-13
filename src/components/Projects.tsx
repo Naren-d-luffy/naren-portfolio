@@ -20,7 +20,7 @@ const projects = [
     description: "A professional networking platform inspired by LinkedIn, enabling users to connect, share insights, and collaborate within communities.",
     tech: ["MERN","Messaging","RBAC(Auth)"],
     isPrivate: false,
-    github: "https://github.com/Naren-d-luffy/Clubwize-UI.git",
+    github: "https://github.com/Ramnaren-dev/Clubwize-UI.git",
     demo: "#",
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     description: "My personal portfolio built with Next.js & Tailwind CSS.",
     tech: ["Next.js", "Tailwind", "AOS"],
     isPrivate: false,
-    github: "https://github.com/Naren-d-luffy/naren-portfolio.git",
+    github: "https://github.com/Ramnaren-dev/naren-portfolio.git",
     demo: "#",
   },
 ];
