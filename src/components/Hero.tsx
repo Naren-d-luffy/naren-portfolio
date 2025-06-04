@@ -13,10 +13,10 @@ export default function Hero() {
           Hi, I&apos;m Ram <span className="text-purple-800">Naren</span>
         </h1>
         <h2 className="text-lg md:text-2xl font-semibold text-gray-700" data-aos="fade-up" data-aos-delay="200">
-          Founder of <span className="text-purple-800 font-bold">StackHive</span> | Full Stack Developer
+          Full Stack Developer | DevOps & Cloud Enthusiast
         </h2>
         <p className="text-sm md:w-3/4 w-full text-center md:text-justify mt-3 mb-6 text-gray-600" data-aos="fade-up" data-aos-delay="300">
-          I specialize in MERN stack development, cloud deployment, and scalable web applications to help businesses grow online.
+          A passionate Full Stack Developer specializing in MERN stack, cloudAdd commentMore actions technologies, and scalable web applications.
         </p>
         <div className="flex space-x-4 justify-center md:justify-start" data-aos="fade-up" data-aos-delay="400">
           <a href="#contact"
