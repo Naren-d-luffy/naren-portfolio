@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans", display: "swap", });
 
 export const metadata: Metadata = {
-  title: "RamNaren | Stack Hive",
+  title: "RamNaren",
   description: "Full Stack Developer | MERN | Next.js | Cloud",
   icons: {
     icon: "./favicon.png",
